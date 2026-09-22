@@ -73,7 +73,7 @@ public class WalletServiceImpl implements WalletService {
                 .orElseThrow(() -> new WalletException("Wallet ID " + ID + " Not Found"));
 
         if (foundWallet.getBalance() < amount) {
-            throw new WalletException("Wallet Balance Not Enough:" + foundWallet.getBalance());
+            throw new WalletException("Wallet Balance Not Enough (Please check):" + foundWallet.getBalance());
         }
 
         Double currentbalace = foundWallet.getBalance();
